@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ],
+  "plugins": [
+    "./node_modules/prettier-plugin-tailwindcss",
+    "./node_modules/prettier-plugin-organize-imports"
+  ]
+}
