@@ -29,12 +29,12 @@
     "skipLibCheck": true
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.js",
-    "**/.jsx",
-    "**/*.cjs",
-    "**/*.mjs"
+    "./tailwind.config.js",
+    "./postcss.config.js",
+    "./next.config.js",
+    "./next-env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }
