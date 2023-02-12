@@ -1,9 +1,12 @@
+import { trpc } from "@/utils/trpc";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: React.FC = () => {
+  const hello = trpc.hello.useQuery({ text: "from tRPC" });
+
   return (
     <>
       <Head>
@@ -16,7 +19,9 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={`${inter.className} text-2xl`}>Hello, World!</h1>
+        <h1 className={`${inter.className} text-2xl`}>
+          {hello.data ?? "Loading..."}
+        </h1>
       </main>
     </>
   );
